@@ -2,32 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.desktop-nav li::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3.5px;
+  width: 0%;
+  background-color: #ffb703;
+  transition: all ease-in-out 250ms;
+}
+.desktop-nav li:hover::after {
+  width: 70%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/*! ------------ ScrollBar Styles ------------ */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffb703;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fb8500;
+}
+
+.custome-btn {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffb703;
+  color: #ffb703;
+}
+
+.custome-btn span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.custome-btn:hover span {
+  color: #023047;
+}
+
+.custome-btn::before,
+.custome-btn::after {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.custome-btn::before {
+  content: "";
+  background: #023047;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.custome-btn:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.pattern-bg {
+  background-image: radial-gradient(#ffb703 0.6px, transparent 0.6px),
+    radial-gradient(#ffb703 0.6px, #ffffff 0.6px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
 }
