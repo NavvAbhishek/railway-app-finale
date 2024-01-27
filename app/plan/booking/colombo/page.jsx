@@ -1,5 +1,5 @@
 "use client";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/components/Navbar";
 import React from "react";
 import Image from "next/image";
 import HotelImg1 from "@/public/colombo/hotel1.png";
@@ -26,7 +26,7 @@ const page = () => {
                 <Image
                   src={HotelImg1} // Replace with a relevant Unsplash image
                   alt="Hotel"
-                  className="w-full md:h-48 md:w-56 object-cover"
+                  className="w-full md:h-52 md:w-52 object-cover"
                 />
               </div>
               <div className="p-4">

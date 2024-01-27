@@ -34,7 +34,7 @@ const ServicesBar = () => {
       {boxes.map((box, index) => (
         <div
           key={index}
-          className="bg-light-blue flex items-center p-3 rounded-lg gap-3 max-w-[225px] cursor-pointer w-full sm:w-1/2 lg:w-1/4"
+          className="bg-light-blue flex items-center p-3 rounded-lg gap-3 max-w-[225px] cursor-pointer w-1/2"
         >
           <p className="text-blue">{box.icon}</p>
           <div>

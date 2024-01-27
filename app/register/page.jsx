@@ -87,7 +87,7 @@ const page = () => {
                   </label>
                 </div>
               </div>
-              <button type="submit" className="w-full custome-btn"> <span>Create an account</span> </button>
+              <button className="w-full custome-btn"> <span>Create an account</span> </button>
               <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                 Already have an account?{" "}
                 <Link

@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="relative w-full bg-dark-blue text-yellow-400 pt-5">
+    <footer className="relative w-full bg-dark-blue text-yellow pt-5">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <div className="mb-6 md:mx-0 mx-auto">
@@ -33,7 +33,7 @@ export function Footer() {
               <ul key={title}>
                 <Typography
                   variant="small"
-                  color="yellow-400"
+                  color="yellow"
                   className="mb-3 text-lg font-bold"
                 >
                   {title}
@@ -43,8 +43,8 @@ export function Footer() {
                     <Typography
                       as="a"
                       href="#"
-                      color="yellow-400"
-                      className="py-1.5 text-sm transition-colors hover:text-yellow-400 opacity-70 hover:opacity-100"
+                      color="yellow"
+                      className="py-1.5 text-sm transition-colors hover:text-yellow opacity-70 hover:opacity-100"
                     >
                       {link}
                     </Typography>

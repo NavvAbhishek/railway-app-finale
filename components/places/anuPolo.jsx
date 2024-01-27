@@ -55,8 +55,8 @@ const SectionPoloAnu = () => {
             <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg transition duration-300 ease-in-out hover:shadow-2xl">
               <Image
                 src={place.img}
-                layout="fill" // Use 'fill' layout to cover the container
-                objectFit="cover" // Cover the container while preserving aspect ratio
+                fill={true} // Use 'fill' layout to cover the container
+                style={{objectFit: "cover"}} // Cover the container while preserving aspect ratio
                 alt={place.title}
                 className="transition duration-300 ease-in-out transform hover:scale-110"
               />

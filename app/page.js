@@ -30,8 +30,10 @@ const Home = () => {
           <Notice />
         </div>
       </div>
+      <div className="flex flex-col md:flex-row w-[90%] mx-auto">
       <WhySection/>
       <ServicesBar />
+      </div>
       <TrainBookSection />
       <TripSection />
       <Footer />

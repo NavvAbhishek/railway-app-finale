@@ -12,8 +12,8 @@ export function CarouselHeader() {
         <Image
           src={CarousalImage2}
           alt="image 1"
-          layout="fill" // Changed to 'fill' to cover the div size
-          objectFit="cover"
+          fill={true}
+          style={{objectFit: "cover"}}
 
           // width={500} automatically provided
           // height={500} automatically provided
@@ -54,8 +54,8 @@ export function CarouselHeader() {
         <Image
           src={CarousalImage3}
           alt="image 1"
-          layout="fill" // Changed to 'fill' to cover the div size
-          objectFit="cover"
+          fill={true}
+          style={{objectFit: "cover"}}
 
           // width={500} automatically provided
           // height={500} automatically provided
@@ -96,8 +96,8 @@ export function CarouselHeader() {
         <Image
           src={CarousalImage1}
           alt="image 1"
-          layout="fill" // Changed to 'fill' to cover the div size
-          objectFit="cover"
+          fill={true}
+          style={{objectFit: "cover"}}
 
           // width={500} automatically provided
           // height={500} automatically provided

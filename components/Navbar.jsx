@@ -16,7 +16,7 @@ const Navbar = () => {
           <Image src={Logo} alt="Logo" className="w-auto md:h-16 h-12" />
         </Link>
         <div className="flex">
-          <ul className="flex md:space-x-10 space-x-3">
+          <ul className="flex md:space-x-10 space-x-8">
             <li className="nav-link text-white md:text-lg text-md font-semibold hover:text-dark-yellow relative">
               <Link href="">Ticket Booking</Link>
             </li>
