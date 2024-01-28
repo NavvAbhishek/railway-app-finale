@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import React from "react";
 import Image from "next/image";
@@ -52,9 +53,11 @@ const page = () => {
                 <span className="text-3xl font-bold text-dark-blue">
                   LKR 42,249.56
                 </span>
-                <button className="custome-btn">
-                  <span>Book Now</span>
-                </button>
+                <Link href="/booking/hotel">
+                  <button className="custome-btn">
+                    <span>Book Now</span>
+                  </button>
+                </Link>
               </div>
               <div className="flex mt-4">
                 <div className="flex items-center mr-2 text-dark-yellow">
@@ -110,9 +113,11 @@ const page = () => {
                 <span className="text-3xl font-bold text-dark-blue">
                   LKR 28.076.26
                 </span>
-                <button className="custome-btn">
-                  <span>Book Now</span>
-                </button>
+                <Link href="/booking/hotel">
+                  <button className="custome-btn">
+                    <span>Book Now</span>
+                  </button>
+                </Link>
               </div>
               <div className="flex mt-4">
                 <div className="flex items-center mr-2 text-dark-yellow">
