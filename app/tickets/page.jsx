@@ -8,6 +8,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { MobileTimePicker } from "@mui/x-date-pickers/MobileTimePicker";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const destinations = [
   "Kandy",
@@ -106,17 +107,12 @@ const Tickets = () => {
           </div>
           <div>
             {/* //! -------------------------- DATE --------------------------  */}
-            <div className="relative md:min-w-[200px] w-[350px] md:mt-10">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <BsCalendarDate className="w-5 h-5" />
-              </div>
-              <input
-                datepicker="true"
-                datepicker-autohide="true"
-                type="text"
-                className="bg-dark-blue border border-gray-300 text-dark-blue text-sm rounded-lg focus:ring-dark-blue focus:border-blue-500 block w-full ps-10 p-2.5"
-                placeholder="Select date"
-              />
+            <div className="md:min-w-[200px] w-[350px] text-dark-blue mt-10">
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoItem>
+                <DatePicker label="" />
+              </DemoItem>
+            </LocalizationProvider>
             </div>
             {/* //! -------------------------- TIME --------------------------  */}
             <div className="md:min-w-[200px] w-[350px] text-dark-blue mt-10">
