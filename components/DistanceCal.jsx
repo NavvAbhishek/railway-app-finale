@@ -48,8 +48,8 @@ export default function DistanceCal() {
 
   return (
     <div className="flex md:justify-start justify-center sm:mt-0 mt-4 sm:ml-4">
-      <div className="bg-dark-blue border-4 border-blue-800 px-12 sm:px-4 pt-4 max-w-md sm:max-w-sm rounded-lg shadow-md">
-        <h2 className="bg-blue-800 text-white text-2xl text-left font-bold px-4 rounded">
+      <div className="bg-dark-blue border-4  px-12 sm:px-4 pt-4 max-w-md sm:max-w-sm rounded-lg shadow-md">
+        <h2 className="bg-dark-yellow text-dark-blue text-2xl py-2 text-center font-bold rounded">
           FIND YOUR DISTANCE AND PARCEL TRANSPORT COST
         </h2>
         {/* //! -------------------------- FROM --------------------------  */}
@@ -170,14 +170,14 @@ export default function DistanceCal() {
          {allFieldsFilled ? 
          <button
          onClick={() => setButtonClicked(!buttonClicked)}
-         className="w-full bg-blue-800 text-dark-blue font-bold py-2 px-4 rounded bg-dark-yellow"
+         className="w-full bg-dark-yellow text-dark-blue font-bold py-2 px-4 rounded cursor-pointer"
          disabled={!allFieldsFilled}
        >
          Calculate
        </button> :
         <button
         onClick={() => setButtonClicked(!buttonClicked)}
-        className="w-full bg-blue-800 text-dark-blue font-bold py-2 px-4 rounded bg-dark-yellow"
+        className="w-full bg-dark-yellow text-dark-blue font-bold py-2 px-4 rounded cursor-pointer"
         disabled={!allFieldsFilled}
       >
         Fill all fields

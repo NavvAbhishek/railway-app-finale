@@ -1,6 +1,8 @@
-import React from "react";
+"use client"
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { GrSchedule } from "react-icons/gr";
-import { GrServicePlay } from "react-icons/gr";
 import { GiShoppingBag } from "react-icons/gi";
 import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
 import { MdOutlineDevicesOther } from "react-icons/md";
@@ -29,17 +31,23 @@ const boxes = [
 ];
 
 const ServicesBar = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <div className="flex flex-wrap justify-center gap-5 my-10">
       {boxes.map((box, index) => (
         <div
+          data-aos="fade-up"
           key={index}
-          className="bg-light-blue flex items-center p-3 rounded-lg gap-3 max-w-[225px] cursor-pointer w-1/2"
+          className="bg-dark-blue text-dark-yellow flex items-center p-3 rounded-lg gap-3 max-w-[225px] cursor-pointer w-1/2  transition ease-in-out duration-1000 hover:scale-110"
         >
-          <p className="text-blue">{box.icon}</p>
+          <p className="text-orange">{box.icon}</p>
           <div>
-            <p className="text-lg font-bold text-dark-blue">{box.title}</p>
-            <p className="text-xs text-dark-blue">{box.description}</p>
+            <p className="text-lg font-bold ">{box.title}</p>
+            <p className="text-xs">{box.description}</p>
           </div>
         </div>
       ))}

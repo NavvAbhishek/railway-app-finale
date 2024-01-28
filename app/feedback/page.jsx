@@ -1,4 +1,7 @@
-"use client";
+"use client"
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
@@ -10,24 +13,28 @@ const userDetails = [
     name: "Morgan Avery",
     position: "Travel Blogger",
     img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+   aos: "fade-right",
   },
   {
     desc: "Booking my train tickets has never been easier, great user experience!",
     name: "Jamie Lannister",
     position: "Product Manager",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+   aos: "fade-left",
   },
   {
     desc: "The interface is clean and simple to use, even for complex booking schedules.",
     name: "Alexis Johnson",
     position: "UX Designer",
     img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+   aos: "fade-right",
   },
   {
     desc: "Real-time updates and notifications are super helpful for my travel planning.",
     name: "Rajesh Kumar",
     position: "IT Consultant",
     img: "https://images.unsplash.com/photo-1542178243-bc20204b769f?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+   aos: "fade-left",
   },
 ];
 
@@ -37,6 +44,11 @@ const FeedBack = () => {
     console.log("clicked");
     setIsDropdownOpen(!isDropdownOpen);
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <div className="pattern-bg min-h-screen">
         <Navbar/>
@@ -48,6 +60,7 @@ const FeedBack = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {userDetails.map((detail, index) => (
             <div
+            data-aos={detail.aos}
               key={index}
               className="card flex flex-col p-6 shadow-lg rounded-lg bg-white"
             >
@@ -101,8 +114,11 @@ const FeedBack = () => {
               <span> Post comment</span>
             </button>
           </form>
-          <article className="p-6 text-base bg-white shadow-lg rounded-lg dark:bg-gray-900">
-            {/* //! -------------------------- BOX -------------------------- */}
+           {/* //! -------------------------- BOX -------------------------- */}
+          <article 
+           data-aos="fade-right"
+          className="p-6 text-base bg-white shadow-lg rounded-lg dark:bg-gray-900">
+           
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
@@ -208,7 +224,9 @@ const FeedBack = () => {
             </div>
           </article>
           {/* //! -------------------------- BOX -------------------------- */}
-          <article className="p-6 mb-3 text-base bg-white mt-6 shadow-lg rounded-lg dark:bg-gray-900">
+          <article 
+           data-aos="fade-left"
+          className="p-6 mb-3 text-base bg-white mt-6 shadow-lg rounded-lg dark:bg-gray-900">
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
@@ -311,7 +329,9 @@ const FeedBack = () => {
             </div>
           </article>
           {/* //! -------------------------- BOX -------------------------- */}
-          <article className="p-6 mb-3 text-base bg-white rounded-lg shadow-lg border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+          <article 
+           data-aos="fade-left"
+          className="p-6 mb-3 text-base bg-white rounded-lg shadow-lg border-gray-200 dark:border-gray-700 dark:bg-gray-900">
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
@@ -414,7 +434,9 @@ const FeedBack = () => {
             </div>
           </article>
 
-          <article className="shadow-lg p-6 text-base bg-white border-gray-200 rounded-lg dark:border-gray-700 dark:bg-gray-900">
+          <article 
+           data-aos="fade-right"
+          className="shadow-lg p-6 text-base bg-white border-gray-200 rounded-lg dark:border-gray-700 dark:bg-gray-900">
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">

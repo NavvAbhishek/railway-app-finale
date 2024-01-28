@@ -18,10 +18,10 @@ const Navbar = () => {
         <div className="flex">
           <ul className="flex md:space-x-10 space-x-8">
             <li className="nav-link text-white md:text-lg text-md font-semibold hover:text-dark-yellow relative">
-              <Link href="">Ticket Booking</Link>
+              <Link href="/tickets">Ticket Booking</Link>
             </li>
             <li className="nav-link text-white md:text-lg text-md font-semibold hover:text-dark-yellow relative">
-              <Link href="">Trip Planner</Link>
+              <Link href="/plan">Trip Planner</Link>
             </li>
             <li className="nav-link text-white md:text-lg text-md font-semibold hover:text-dark-yellow relative">
               <Link href="">Contact us</Link>

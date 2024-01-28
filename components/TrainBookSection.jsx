@@ -1,22 +1,30 @@
-import React from "react";
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 import TripImg from "@/public/ticket-booking.png";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const TrainBookSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <div>
       <div className="lg:max-w-[80%] max-w-[90%] mx-auto my-16">
         <div className="flex justify-center items-center flex-col md:flex-row gap-10">
-          <div className="md:w-[50%]">
+          <div data-aos="fade-right" className="md:w-[50%]">
             <Image
               src={TripImg}
               alt="Logo"
               className="w-[500px] h-[500px] object-contain rounded-xl"
             />
           </div>
-          <div className="text-dark-blue md:w-[50%]">
+          <div data-aos="fade-left" className="text-dark-blue md:w-[50%]">
             <h1 className="text-2xl md:text-3xl uppercase font-extrabold">
               Book your tickets
             </h1>

@@ -14,11 +14,6 @@ export function CarouselHeader() {
           alt="image 1"
           fill={true}
           style={{objectFit: "cover"}}
-
-          // width={500} automatically provided
-          // height={500} automatically provided
-          // blurDataURL="data:..." automatically provided
-          // placeholder="blur" // Optional blur-up while loading
         />
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
           <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
@@ -40,9 +35,9 @@ export function CarouselHeader() {
               line, it connects Galle with Colombo and other southern towns.
             </Typography>
             <div className="flex gap-2">
-              <Button size="lg" className="text-dark-yellow bg-dark-blue">
-                Explore
-              </Button>
+              <button className="custome-btn rounded-3xl">
+               <span> Explore</span>
+              </button>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>
@@ -56,11 +51,6 @@ export function CarouselHeader() {
           alt="image 1"
           fill={true}
           style={{objectFit: "cover"}}
-
-          // width={500} automatically provided
-          // height={500} automatically provided
-          // blurDataURL="data:..." automatically provided
-          // placeholder="blur" // Optional blur-up while loading
         />
         <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
           <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
@@ -82,9 +72,9 @@ export function CarouselHeader() {
               with Colombo and other major cities.
             </Typography>
             <div className="flex gap-2">
-              <Button size="lg" className="text-dark-yellow bg-dark-blue">
-                Explore
-              </Button>
+            <button className="custome-btn rounded-3xl">
+               <span> Explore</span>
+              </button>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>
@@ -98,11 +88,6 @@ export function CarouselHeader() {
           alt="image 1"
           fill={true}
           style={{objectFit: "cover"}}
-
-          // width={500} automatically provided
-          // height={500} automatically provided
-          // blurDataURL="data:..." automatically provided
-          // placeholder="blur" // Optional blur-up while loading
         />
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
           <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
@@ -125,9 +110,9 @@ export function CarouselHeader() {
               country.
             </Typography>
             <div className="flex gap-2">
-              <Button size="lg" className="text-dark-yellow bg-dark-blue">
-                Explore
-              </Button>
+            <button className="custome-btn rounded-3xl">
+               <span> Explore</span>
+              </button>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>

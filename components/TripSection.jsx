@@ -1,15 +1,25 @@
-import React from "react";
+"use client"
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 import TripImg from "@/public/TripImg.png";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const TripSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <div>
       <div className="lg:max-w-[80%] max-w-[90%] mx-auto mt-6 mb-12">
         <div className="flex justify-center items-center flex-col-reverse md:flex-row">
-          <div className="text-dark-blue md:w-[50%]">
+          <div 
+           data-aos="fade-up"
+          className="text-dark-blue md:w-[50%]">
             <h1 className="text-3xl uppercase font-extrabold">
               Discover your Destination
             </h1>
@@ -35,7 +45,9 @@ const TripSection = () => {
               </button>
             </Link>
           </div>
-          <div className="md:w-[50%]">
+          <div 
+           data-aos="fade-down"
+          className="md:w-[50%]">
             <Image
               src={TripImg}
               alt="Logo"
