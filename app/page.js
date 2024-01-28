@@ -2,7 +2,7 @@ import { CarouselHeader } from '@/components/Carousel'
 import Navbar from '@/components/Navbar'
 import DistanceCal from '@/components/DistanceCal'
 import Notice from '@/components/Notice'
-import WhySection from '@/components/Why'
+import InfoSection from '@/components/Info'
 import ServicesBar from '@/components/ServicesBar'
 import TrainBookSection from '@/components/TrainBookSection'
 import TripSection from '@/components/TripSection'
@@ -30,12 +30,10 @@ const Home = () => {
           <Notice />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row w-[90%] mx-auto">
-      <WhySection/>
       <ServicesBar />
-      </div>
       <TrainBookSection />
       <TripSection />
+      <InfoSection/>
       <Footer />
     </div>
   )
