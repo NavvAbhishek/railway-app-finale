@@ -37,7 +37,7 @@ const TrainBookSection = () => {
               bookings on the go.
             </p>
             <p className="text-sm md:text-md mt-5">
-              Whether you're planning a leisurely trip or a business commute,
+              Whether you&apos;re planning a leisurely trip or a business commute,
               our app puts convenient and flexible travel solutions at your
               fingertips. Start your adventure now and experience a smarter way
               to travel!

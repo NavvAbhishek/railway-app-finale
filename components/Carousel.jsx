@@ -31,7 +31,7 @@ export function CarouselHeader() {
             >
               Galle Railway Station, located in the heart of the historic city
               of Galle, is known for its picturesque setting and colonial-era
-              architecture. As a key station in Sri Lanka's Southern railway
+              architecture. As a key station in Sri Lanka&apos;s Southern railway
               line, it connects Galle with Colombo and other southern towns.
             </Typography>
             <div className="flex gap-2">
@@ -105,7 +105,7 @@ export function CarouselHeader() {
             >
               Fort Railway Station is a major rail hub in Colombo, renowned for
               its historical significance and architectural charm. Serving as
-              the primary railway station in Sri Lanka's capital, it is a
+              the primary railway station in Sri Lanka&apos;s capital, it is a
               bustling center of activity, connecting various parts of the
               country.
             </Typography>

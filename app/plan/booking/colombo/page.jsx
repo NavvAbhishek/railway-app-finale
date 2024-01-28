@@ -9,7 +9,7 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div>
@@ -153,4 +153,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

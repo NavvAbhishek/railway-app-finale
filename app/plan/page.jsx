@@ -15,7 +15,7 @@ const places = [
   "Trincomalee",
 ];
 
-const page = () => {
+const Page = () => {
   const [destination, setDestination] = useState("");
   return (
     <div>
@@ -63,4 +63,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

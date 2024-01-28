@@ -39,7 +39,7 @@ const TripSection = () => {
             <Link href="/plan">
               <button className="custome-btn group  mt-5 bg-dark-yellow px-3 py-3 rounded-lg font-bold cursor-pointer transition-all ">
                 <span className="flex items-center justify-center gap-1">
-                  <p>Let's Discover</p>
+                  <p>Let&apos;s Discover</p>
                   <MdOutlineKeyboardDoubleArrowRight className="h-7 w-7 transform group-hover:translate-x-1.5 transition-transform" />
                 </span>
               </button>

@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
+import Image from 'next/image'
 
 const userDetails = [
   {
@@ -122,7 +123,7 @@ const FeedBack = () => {
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
-                  <img
+                  <Image
                     className="mr-2 w-8 h-8 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
                     alt="Michael Gough"
@@ -230,7 +231,7 @@ const FeedBack = () => {
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
-                  <img
+                  <Image
                     className="mr-2 w-8 h-8 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                     alt="Jese Leos"
@@ -335,7 +336,7 @@ const FeedBack = () => {
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
-                  <img
+                  <Image
                     className="mr-2 w-8 h-8 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
                     alt="Bonnie Green"
@@ -440,7 +441,7 @@ const FeedBack = () => {
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
-                  <img
+                  <Image
                     className="mr-2 w-8 h-8 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
                     alt="Helene Engels"

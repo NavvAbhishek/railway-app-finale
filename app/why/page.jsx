@@ -59,7 +59,7 @@ const Details = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -102,4 +102,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
