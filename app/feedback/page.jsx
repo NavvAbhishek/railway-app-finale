@@ -69,7 +69,7 @@ const FeedBack = () => {
                 {detail.desc}
               </blockquote>
               <div className="flex items-center mt-4">
-                <img
+                <Image
                   className="w-12 h-12 rounded-full object-cover"
                   src={detail.img}
                   alt={detail.name}
