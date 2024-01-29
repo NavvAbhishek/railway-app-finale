@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -6,37 +6,45 @@ import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
-import Image from 'next/image'
+import Image from "next/image";
+import avatar1 from "@/public/avatars/avatar1.png";
+import avatar2 from "@/public/avatars/avatar2.png";
+import avatar3 from "@/public/avatars/avatar3.png";
+import avatar4 from "@/public/avatars/avatar4.png";
+import avatar5 from "@/public/avatars/avatar5.png";
+import avatar6 from "@/public/avatars/avatar6.png";
+import avatar7 from "@/public/avatars/avatar7.png";
+import avatar8 from "@/public/avatars/avatar8.png";
 
 const userDetails = [
-  {
-    desc: "The booking process was straightforward, and the customer service was excellent. Highly recommended!",
-    name: "Morgan Avery",
-    position: "Travel Blogger",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-   aos: "fade-right",
-  },
   {
     desc: "Booking my train tickets has never been easier, great user experience!",
     name: "Jamie Lannister",
     position: "Product Manager",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-   aos: "fade-left",
+    img: avatar6,
+    aos: "fade-left",
   },
   {
     desc: "The interface is clean and simple to use, even for complex booking schedules.",
     name: "Alexis Johnson",
     position: "UX Designer",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-   aos: "fade-right",
+    img: avatar1,
+    aos: "fade-right",
   },
   {
     desc: "Real-time updates and notifications are super helpful for my travel planning.",
     name: "Rajesh Kumar",
     position: "IT Consultant",
-    img: "https://images.unsplash.com/photo-1542178243-bc20204b769f?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-   aos: "fade-left",
+    img: avatar2,
+    aos: "fade-left",
   },
+  {
+    desc: "The booking process was straightforward, and the customer service was excellent. Highly recommended!",
+    name: "Morgan Avery",
+    position: "Travel Blogger",
+    img: avatar7,
+    aos: "fade-right",
+  }
 ];
 
 const FeedBack = () => {
@@ -52,7 +60,7 @@ const FeedBack = () => {
   }, []);
   return (
     <div className="pattern-bg min-h-screen">
-        <Navbar/>
+      <Navbar />
       <h1 className="text-dark-blue text-3xl md:text-4xl font-bold py-6 text-center">
         Feedbacks
       </h1>
@@ -61,7 +69,7 @@ const FeedBack = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {userDetails.map((detail, index) => (
             <div
-            data-aos={detail.aos}
+              data-aos={detail.aos}
               key={index}
               className="card flex flex-col p-6 shadow-lg rounded-lg bg-white"
             >
@@ -115,17 +123,17 @@ const FeedBack = () => {
               <span> Post comment</span>
             </button>
           </form>
-           {/* //! -------------------------- BOX -------------------------- */}
-          <article 
-           data-aos="fade-right"
-          className="p-6 text-base bg-white shadow-lg rounded-lg dark:bg-gray-900">
-           
+          {/* //! -------------------------- BOX -------------------------- */}
+          <article
+            data-aos="fade-right"
+            className="p-6 text-base bg-white shadow-lg rounded-lg dark:bg-gray-900"
+          >
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
                   <Image
                     className="mr-2 w-8 h-8 rounded-full"
-                    src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                    src={avatar3}
                     alt="Michael Gough"
                   />
                   Michael Gough{" "}
@@ -225,15 +233,16 @@ const FeedBack = () => {
             </div>
           </article>
           {/* //! -------------------------- BOX -------------------------- */}
-          <article 
-           data-aos="fade-left"
-          className="p-6 mb-3 text-base bg-white mt-6 shadow-lg rounded-lg dark:bg-gray-900">
+          <article
+            data-aos="fade-left"
+            className="p-6 mb-3 text-base bg-white mt-6 shadow-lg rounded-lg dark:bg-gray-900"
+          >
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
                   <Image
                     className="mr-2 w-8 h-8 rounded-full"
-                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    src={avatar4}
                     alt="Jese Leos"
                   />
                   Jese Leos
@@ -330,15 +339,16 @@ const FeedBack = () => {
             </div>
           </article>
           {/* //! -------------------------- BOX -------------------------- */}
-          <article 
-           data-aos="fade-left"
-          className="p-6 mb-3 text-base bg-white rounded-lg shadow-lg border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+          <article
+            data-aos="fade-left"
+            className="p-6 mb-3 text-base bg-white rounded-lg shadow-lg border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+          >
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
                   <Image
                     className="mr-2 w-8 h-8 rounded-full"
-                    src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                    src={avatar5}
                     alt="Bonnie Green"
                   />
                   Bonnie Green
@@ -435,15 +445,16 @@ const FeedBack = () => {
             </div>
           </article>
 
-          <article 
-           data-aos="fade-right"
-          className="shadow-lg p-6 text-base bg-white border-gray-200 rounded-lg dark:border-gray-700 dark:bg-gray-900">
+          <article
+            data-aos="fade-right"
+            className="shadow-lg p-6 text-base bg-white border-gray-200 rounded-lg dark:border-gray-700 dark:bg-gray-900"
+          >
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center mr-3 text-lg text-gray-900 dark:text-white font-semibold">
                   <Image
                     className="mr-2 w-8 h-8 rounded-full"
-                    src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                    src={avatar8}
                     alt="Helene Engels"
                   />
                   Helene Engels
