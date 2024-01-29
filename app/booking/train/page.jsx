@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Img from "@/public/checkout-train.png";
+import Navbar from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const PaymentForm = () => {
   // State variables for form fields
@@ -58,10 +60,11 @@ const PaymentForm = () => {
 
   return (
     <div className="min-h-screen  pattern-bg">
-      <div className="text-center pt-8">
+      <Navbar/>
+      <div className="text-center py-8">
         <h1 className="text-dark-blue text-3xl font-bold">Book Your Tickets</h1>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mb-12">
         <div className="flex md:flex-row flex-col items-stretch rounded-lg py-12 md:py-0">
           <div className="flex-shrink-0">
             <Image
@@ -294,6 +297,7 @@ const PaymentForm = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
