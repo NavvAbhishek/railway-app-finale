@@ -35,7 +35,7 @@ const page = () => {
                       </div>
                       <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
                   </div>
-                  <button className="w-full custome-btn"> <span>Sign in</span> </button>
+                  <Link href="/"><button className="w-full custome-btn"> <span>Sign in</span> </button></Link>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Don’t have an account yet? <Link href="/register" className="font-medium text-primary-600 hover:text-dark-blue hover:underline dark:text-primary-500">Register</Link>
                   </p>
