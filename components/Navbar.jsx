@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Desktop Navbar */}
-      <nav className="desktop-nav bg-dark-blue sm:flex sm:items-center sm:justify-between py-3 px-8 hidden">
+      <nav className="desktop-nav bg-dark-blue md:flex md:items-center md:justify-between py-3 px-8 hidden">
         <Link href="/">
           <Image src={Logo} alt="Logo" className="w-auto md:h-16 h-12" />
         </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar Button */}
-      <div className="bg-dark-blue p-3 sm:hidden flex justify-between items-center">
+      <div className="bg-dark-blue p-3 md:hidden flex justify-between items-center">
         <Link href="/">
           <Image src={Logo} alt="Logo" className="w-auto md:h-16 h-12" />
         </Link>
@@ -62,7 +62,7 @@ const Navbar = () => {
       <div
         className={`fixed inset-0 z-40 transform ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        } transition-transform duration-500 ease-in-out sm:hidden`}
+        } transition-transform duration-500 ease-in-out md:hidden`}
       >
         <nav className="bg-dark-blue flex flex-col items-center w-full h-screen">
           <div className="flex flex-col items-center space-y-6 pt-32 bg-dark-blue w-full">
