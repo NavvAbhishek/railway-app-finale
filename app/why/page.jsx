@@ -66,7 +66,7 @@ const Page = () => {
     });
   }, []);
   return (
-    <div className="min-h-screen pattern-bg">
+    <div className="min-h-screen pattern-bg overflow-hidden">
       <Navbar />
       <div>
         <h1

@@ -59,7 +59,7 @@ const FeedBack = () => {
     });
   }, []);
   return (
-    <div className="pattern-bg min-h-screen">
+    <div className="pattern-bg min-h-screen overflow-hidden">
       <Navbar />
       <h1 className="text-dark-blue text-3xl md:text-4xl font-bold py-6 text-center">
         Feedbacks

@@ -47,7 +47,9 @@ const Navbar = () => {
 
       {/* Mobile Navbar Button */}
       <div className="bg-dark-blue p-3 sm:hidden flex justify-between items-center">
-        <Image src={Logo} alt="Logo" className="w-auto md:h-16 h-12" />
+        <Link href="/">
+          <Image src={Logo} alt="Logo" className="w-auto md:h-16 h-12" />
+        </Link>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white text-3xl z-50"
@@ -83,7 +85,7 @@ const Navbar = () => {
             </Link>
             <Link href="/register">
               <button className="bg-maize-crayola text-dark-blue font-semibold py-3 px-6 rounded-full bg-dark-yellow">
-               Register
+                Register
               </button>
             </Link>
           </div>

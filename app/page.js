@@ -10,7 +10,7 @@ import { Footer } from '@/components/Footer'
 
 const Home = () => {
   return (
-    <div className="bg-white opacity-100 pattern-bg">
+    <div className="bg-white opacity-100 pattern-bg overflow-hidden">
       {/* <Banner /> */}
       <Navbar />
       {/* <div className="flex sm:flex-row flex-col-reverse sm:gap-3">
