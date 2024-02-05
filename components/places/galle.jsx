@@ -1,6 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; 
 import pic1 from "@/public/galle/pic1.png";
 import pic2 from "@/public/galle/pic2.png";
 import pic3 from "@/public/galle/pic3.png";
@@ -43,8 +43,27 @@ const places = [
 ];
 
 const SectionGalle = () => {
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowAnimation(true);
+    setTimeout(() => {
+      setShowAnimation(false);
+      window.location.href = "/plan/booking/galle"; // Redirect after 4 seconds
+    }, 4000);
+  };
   return (
     <div>
+      {showAnimation && (
+        <div className="fullscreen-animation">
+          <div className="searching-text font-bold">Searching Nearest Hotels...</div>
+          <div className="searching-dots">
+            <div className="searching-circle"></div>
+            <div className="searching-circle"></div>
+            <div className="searching-circle"></div>
+          </div>
+        </div>
+      )}
       <div className="flex flex-wrap gap-5 justify-center mt-4">
         {places.map((place, index) => (
           <div key={index} className="max-w-sm w-full mt-12">
@@ -61,11 +80,9 @@ const SectionGalle = () => {
               />
             </div>
             <p className="mb-4 text-sm mt-4">{place.desc}</p>
-            <Link href="plan/booking/galle">
-          <button className="custome-btn">
+          <button className="custome-btn" onClick={handleButtonClick}>
               <span>Find Hotel Nearby</span>
             </button>
-          </Link>
           </div>
         ))}
       </div>

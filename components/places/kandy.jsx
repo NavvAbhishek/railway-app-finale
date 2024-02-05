@@ -1,6 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import pic1 from "@/public/kandy/pic1.jpg";
 import pic2 from "@/public/kandy/pic2.png";
 import pic3 from "@/public/kandy/pic3.png";
@@ -42,8 +42,28 @@ const places = [
 ];
 
 const SectionKandy = () => {
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowAnimation(true);
+    setTimeout(() => {
+      setShowAnimation(false);
+      window.location.href = "/plan/booking/kandy"; // Redirect after 4 seconds
+    }, 4000);
+  };
+
   return (
     <div>
+      {showAnimation && (
+        <div className="fullscreen-animation">
+          <div className="searching-text font-bold">Searching Nearest Hotels...</div>
+          <div className="searching-dots">
+            <div className="searching-circle"></div>
+            <div className="searching-circle"></div>
+            <div className="searching-circle"></div>
+          </div>
+        </div>
+      )}
       <div className="flex flex-wrap gap-5 justify-center mt-4">
         {places.map((place, index) => (
           <div key={index} className="max-w-sm w-full mt-12">
@@ -54,17 +74,15 @@ const SectionKandy = () => {
               <Image
                 src={place.img}
                 fill={true} // Use 'fill' layout to cover the container
-                style={{objectFit: "cover"}} // Cover the container while preserving aspect ratio
+                style={{ objectFit: "cover" }} // Cover the container while preserving aspect ratio
                 alt={place.title}
                 className="transition duration-300 ease-in-out transform hover:scale-110"
               />
             </div>
             <p className="mb-4 text-sm mt-4">{place.desc}</p>
-            <Link href="/plan/booking/kandy">
-              <button className="custome-btn">
-                <span>Find Hotel Nearby</span>
-              </button>
-            </Link>
+            <button className="custome-btn" onClick={handleButtonClick}>
+              <span>Find Hotel Nearby</span>
+            </button>
           </div>
         ))}
       </div>

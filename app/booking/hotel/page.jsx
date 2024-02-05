@@ -62,7 +62,7 @@ const PaymentForm = () => {
     <div className="min-h-screen  pattern-bg">
       <Navbar/>
       <div className="text-center py-8">
-        <h1 className="text-dark-blue text-3xl font-bold">Book Your Tickets</h1>
+        <h1 className="text-dark-blue text-3xl font-bold">Book Your Hotel</h1>
       </div>
       <div className="flex items-center justify-center mb-12">
         <div className="flex md:flex-row flex-col items-stretch rounded-lg py-12 md:py-0">

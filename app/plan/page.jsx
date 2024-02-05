@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import SectionKandy from "@/components/places/trinco";
+import SectionKandy from "@/components/places/kandy";
 import SectionGalle from "@/components/places/galle";
 import SectionColombo from "@/components/places/colombo";
 import SectionPoloAnu from "@/components/places/anuPolo";

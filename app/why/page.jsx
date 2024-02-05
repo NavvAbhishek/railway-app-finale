@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import Img from "@/public/why.png";
+import Img1 from "@/public/why1.png";
+import Img2 from "@/public/why2.png";
 import Navbar from "@/components/Navbar";
 
 const Details = [
@@ -69,32 +70,37 @@ const Page = () => {
     <div className="min-h-screen pattern-bg overflow-hidden">
       <Navbar />
       <div>
-        <h1
-          className="text-dark-blue text-3xl font-bold capitalize pt-8 text-center"
-        >
+        <h1 className="text-dark-blue text-3xl font-bold capitalize pt-8 text-center">
           What are the benefits of using train?
         </h1>
       </div>
-      <div data-aos="fade-up" className="flex justify-center ">
-        <Image
-          src={Img}
-          alt="Picture of the author"
-          width={400}
-          height={400}
-          className="rounded-lg my-6"
-        />
+      <div className="flex md:flex-row flex-col justify-center items-center md:gap-10 w-[90%] md:w-[80%] mx-auto"> 
+        <div data-aos="fade-up" className="flex justify-center ">
+          <Image
+            src={Img1}
+            alt="Picture of the author"
+            width={500}
+            height={500}
+            className="rounded-lg my-6 object-contain"
+          />
+        </div>
+        <div data-aos="fade-down" className="flex justify-center ">
+          <Image
+            src={Img2}
+            alt="Picture of the author"
+            width={500}
+            height={500}
+            className="rounded-lg my-6 object-contain"
+          />
+        </div>
       </div>
-      <div>
+      <div className="bg-dark-blue w-[90%] md:w-[60%] mx-auto px-12 py-10 rounded-lg my-10">
         {Details.map((detail, index) => (
-          <div
-            data-aos={detail.aos}
-            key={index}
-            className="w-[90%] md:w-[60%] mx-auto my-5"
-          >
-            <h2 className="text-2xl text-dark-blue font-bold">
+          <div data-aos={detail.aos} key={index}>
+            <h2 className="text-2xl text-dark-yellow font-bold">
               {detail.title}
             </h2>
-            <p className="text-dark-blue">{detail.desc}</p>
+            <p className="text-dark-yellow">{detail.desc}</p>
           </div>
         ))}
       </div>
