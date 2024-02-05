@@ -58,9 +58,9 @@ const Tickets = () => {
             <div className="mt-4 md:min-w-[200px] w-[350px]">
               <label
                 htmlFor="from"
-                className="block text-sm font-medium text-dark-yellow"
+                className="block text-sm font-medium text-dark-blue"
               >
-                From
+                Departure Station
               </label>
               <select
                 id="from"
@@ -83,9 +83,9 @@ const Tickets = () => {
             <div className="mt-4 md:min-w-[200px] w-[350px]">
               <label
                 htmlFor="to"
-                className="block text-sm font-medium text-dark-yellow"
+                className="block text-sm font-medium text-dark-blue"
               >
-                To
+               Arrival Station
               </label>
               <select
                 id="to"

@@ -58,7 +58,7 @@ export default function DistanceCal() {
             htmlFor="from"
             className="block text-sm font-medium text-dark-yellow"
           >
-            From
+           Departure Station
           </label>
           <select
             id="from"
@@ -82,7 +82,7 @@ export default function DistanceCal() {
             htmlFor="to"
             className="block text-sm font-medium text-dark-yellow"
           >
-            To
+            Arrival Station
           </label>
           <select
             id="to"
